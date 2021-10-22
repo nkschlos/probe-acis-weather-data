@@ -11,6 +11,6 @@ This code handles the web API communication and can download raw data from any w
 For example, Boulder Municipal Airport in Boulder, CO has a FAA type station ID of BDU.
 To extract the temperatures from BDU from 12 to 18 of October 2021, you would run
 ```python
-import probe-acis-weather-data as pawd
+import probeACISweatherData as pawd
 temp_lo, temp_hi, temp_avg, metadata = pawd.getTemps(stationID="BDU 3", startdate="2021-10-12", enddate="2021-10-18")
 ```
