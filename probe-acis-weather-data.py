@@ -36,6 +36,7 @@ def getTemps(stationID, startdate, enddate):
               }
     response = queryData(params)
     try:
+        # Parse the response
         response = response['data']
         response_data = [entry['data'] for entry in response][0]
         temp_lo = [float(entry[0]) for entry in response_data]
