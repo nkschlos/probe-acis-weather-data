@@ -49,10 +49,7 @@ def getTemps(stationID, startdate, enddate):
 
 def queryData(params):
     params = urllib.parse.urlencode({'params': json.dumps(params)})
-    print(params)
     params = params.encode('utf-8')
-    print(params)
-    print('http://data.rcc-acis.org/MultiStnData', params, {'Accept': 'application/json'})
     req = urllib.request.Request('http://data.rcc-acis.org/MultiStnData',params,{'Accept': 'application/json'})
     response = urllib.request.urlopen(req)
     return json.loads(response.read())
